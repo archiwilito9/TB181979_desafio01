@@ -1,0 +1,66 @@
+﻿@model TB181979_desafio01.Models.Transacciones
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transacciones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CuentaBancarias.Moneda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CuentaBancarias.Moneda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoTransacciones.Tipo_Transaccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoTransacciones.Tipo_Transaccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Monto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaTransaccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaTransaccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaAplicación)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaAplicación)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
