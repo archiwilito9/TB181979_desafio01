@@ -4,12 +4,12 @@
     ViewBag.Title = "Create";
 }
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>Transacciones</h4>
+        <h4>Crear nueva transacción</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -45,7 +45,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CuentaBancariaId, "CuentaBancariaId", htmlAttributes: new { @class = "control-label col-md-2" })
+            Moneda
+            @*@Html.LabelFor(model => model.CuentaBancariaId, "CuentaBancariaId", htmlAttributes: new { @class = "control-label col-md-2" })*@
             <div class="col-md-10">
                 @Html.DropDownList("CuentaBancariaId", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.CuentaBancariaId, "", new { @class = "text-danger" })
@@ -53,23 +54,25 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TipoTransaccionId, "TipoTransaccionId", htmlAttributes: new { @class = "control-label col-md-2" })
+            Tipo de transacción
+            @*@Html.LabelFor(model => model.TipoTransaccionId, "TipoTransaccionId", htmlAttributes: new { @class = "control-label col-md-2" })*@
             <div class="col-md-10">
                 @Html.DropDownList("TipoTransaccionId", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.TipoTransaccionId, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <br />
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Crear" class="btn btn-primary" />
             </div>
         </div>
     </div>
+    <br />
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink(" Regresar", "Index", "", new { @class = "btn btn-secondary bi bi-arrow-left-square" })
 </div>
 
 @section Scripts {

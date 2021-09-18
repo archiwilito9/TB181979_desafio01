@@ -10,7 +10,7 @@
 <h2 class="d-inline-block">Tipo de cuentas bancarias</h2>
 
 <p>
-    @Html.ActionLink("Agregar nuevo tipo de cuenta", "Create")
+    @Html.ActionLink("Agregar nuevo tipo de cuenta", "Create", "", new { @class = "btn btn-info" })
 </p>
 <table class="table table-hover table-dark">
     <tr>
@@ -32,9 +32,9 @@
             @Html.DisplayFor(modelItem => item.Activo)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.id }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.id })
+            @Html.ActionLink(" ", "Edit", new { id=item.id }, new { @class = "btn btn-warning bi bi-pencil" }) |
+            @Html.ActionLink(" ", "Details", new { id=item.id }, new { @class = "btn btn-info bi bi-file-earmark-spreadsheet" }) |
+            @Html.ActionLink(" ", "Delete", new { id=item.id }, new { @class = "btn btn-danger bi bi-trash" })
         </td>
     </tr>
 }
